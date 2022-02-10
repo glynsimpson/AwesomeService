@@ -33,6 +33,7 @@ namespace AwesomeService.Jobs {
                 if (repo.Add(newsItem.results[0]) == false) {
                     offsetValue += 1;
                 } else {
+                    OpenBrowser(newsItem.results[0].Url);
                     return newsItem.results[0];
                 }
             // Only cycle through 50 newsItems at most - as the API only gets the latest newsItem, 
