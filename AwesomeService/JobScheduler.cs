@@ -41,7 +41,7 @@ namespace AwesomeService {
                 .WithIdentity($"{jobName}-Trigger")
                 .StartNow()
                 .Build();
-
+ 
             _scheduler.ScheduleJob(job, cronTrigger);
         }
         public void Stop() {
